@@ -5,11 +5,11 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
-@Configuration
-@ConfigurationProperties(prefix = "spring.datasource")
-@PropertySource("classpath:mybaties.properties")
+@Configuration/*这个必须要的要扫面这个类*/
+@ConfigurationProperties(prefix = "spring.datasource")/*配置的前缀*/
+@PropertySource("classpath:mybaties.properties")/*这个扫描这个配置文件*/
 public class DataSourceConfig {
-
+    /*这些名字的字段属性必须和配置文件中的后缀的名字相同*/
     private String username;
     private String password;
     private String url;
@@ -17,6 +17,7 @@ public class DataSourceConfig {
 
     @Bean(name = "dataSource")
     public BasicDataSource dataSource(){
+        /*一些简单的配置属性*/
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setUrl(url);
         dataSource.setUsername(username);

@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@AutoConfigureAfter(DataSourceConfig.class)
+@AutoConfigureAfter(DataSourceConfig.class)/*这个类的扫描必须在获取sqlSessionFactory之后*/
 public class MapperScannerConfig {
 
     @Bean
@@ -16,5 +16,6 @@ public class MapperScannerConfig {
         mapperScannerConfigurer.setBasePackage("com.tt.spring.dao");
         mapperScannerConfigurer.setSqlSessionFactoryBeanName("sqlSessionFactoryBean");
         return mapperScannerConfigurer;
+
     }
 }
