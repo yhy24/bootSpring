@@ -36,7 +36,7 @@ public class UserController {
     public String insert(){
         User user = new User();
         user.setAge(21);
-        user.setMark("打铁男神!");
+        user.setMark("打铁男神MVP!");
         user.setPassword("824");
         user.setUsername("科比");
         userService.insetInfoUser(user);
