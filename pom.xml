@@ -71,6 +71,22 @@
           <version>8.5.20</version>
       </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.immutant/scheduling -->
+   <!-- <dependency>
+      <groupId>org.immutant</groupId>
+      <artifactId>scheduling</artifactId>
+      <version>2.0.2</version>
+    </dependency>-->
+
+    <!-- https://mvnrepository.com/artifact/org.quartz-scheduler/quartz -->
+    <dependency>
+      <groupId>org.quartz-scheduler</groupId>
+      <artifactId>quartz</artifactId>
+      <version>2.3.0</version>
+    </dependency>
+
+
+
 
   </dependencies>
 
